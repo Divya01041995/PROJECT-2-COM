@@ -24,7 +24,7 @@ public class FriendDaoImpl implements FriendDao {
 	{
 	
 	Session session=sessionFactory.getCurrentSession();
-		SQLQuery sqlQuery=session.createSQLQuery("select * from user_s180396 where email in (select email from user_s180396 where email!=? minus (select fromId from friend_s180396 where toId=? union select toId from friend_s180396 where fromId=?))");
+		SQLQuery sqlQuery=session.createSQLQuery("select * from user_s190035 where email in (select email from user_s190035 where email!=? minus (select fromId from friend_s190035 where toId=? union select toId from friend_s190035 where fromId=?))");
 		sqlQuery.setString(0, email);
 		sqlQuery.setString(1, email);
 		sqlQuery.setString(2, email);
@@ -62,10 +62,10 @@ public class FriendDaoImpl implements FriendDao {
 
 		Session session=sessionFactory.getCurrentSession();
 		SQLQuery query=
-		session.createSQLQuery("select * from user_s180396 where email in"
-				+ "(select fromId from friend_s180396 where toId=? and status='A' "
+		session.createSQLQuery("select * from user_s190035 where email in"
+				+ "(select fromId from friend_s190035 where toId=? and status='A' "
 				+ " union "
-				+ "select toId from friend_s180396 where fromId=? and status='A')");
+				+ "select toId from friend_s190035 where fromId=? and status='A')");
 		query.setString(0, email);
 		query.setString(1, email);
 		query.addEntity(User.class);

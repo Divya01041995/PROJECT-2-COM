@@ -1,6 +1,6 @@
 <div ng-show="loggedInUser.role=='ADMIN'">
 <span ng-if="blogsWaitingForApproval.length==0">No Blogs waiting for approval</span>
-	<div class="container" ng-hide="blogsWaitingForApproval.length==0">
+	<div class="container" ><!-- ng-hide="blogsWaitingForApproval.length==0">  -->
 		<div class="panel panel-info">
 			<div class="panel-heading">List of blogs waiting for approval</div>
 			<div class="panel-body">

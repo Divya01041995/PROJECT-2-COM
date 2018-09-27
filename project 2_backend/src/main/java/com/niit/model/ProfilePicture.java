@@ -6,7 +6,7 @@ import javax.persistence.Lob;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="profilepicture_s180396")
+@Table(name="profilepicture_s190035")
 public class ProfilePicture {
 	@Id
 private String email;
